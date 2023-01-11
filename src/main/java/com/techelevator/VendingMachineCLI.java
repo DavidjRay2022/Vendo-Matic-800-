@@ -1,6 +1,5 @@
 package com.techelevator;
 
-import com.techelevator.app.StockTable;
 import com.techelevator.view.Machine;
 import com.techelevator.view.Menu;
 import com.techelevator.view.SalesReport;
@@ -44,8 +43,8 @@ public class VendingMachineCLI {
 
 			if (choice.equals(MAIN_MENU_OPTION_DISPLAY_ITEMS)) {
 				// display vending machine items
-				//VendoMatic800.displayStock();
-				new StockTable(VendoMatic800);
+				VendoMatic800.displayStock();
+
 			} else if (choice.equals(MAIN_MENU_OPTION_PURCHASE)) {
 				// do purchase
 				PurchaseMenu();

@@ -45,9 +45,9 @@ public abstract class Item {
         this.type = type;
     }
 
-    public String toString() {
-        return "\n" + getSlot() + " | " + getName() + " | $"
-                + getPrice() + " |" + getType();
+    @Override
+    public String toString() { //overriding to string method
+        return String.format( "||%2s||%-19s||$%-4.2f||%-6s||",getSlot() , getName() ,getPrice(), getType()); //used string formatter to have a cleaner menu
     }
 
 

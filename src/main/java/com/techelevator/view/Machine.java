@@ -1,7 +1,5 @@
 package com.techelevator.view;
 
-import com.techelevator.app.StockTable;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.time.LocalDateTime;
@@ -30,18 +28,18 @@ public class Machine {
         return productInventory;
     }
 
-    //Display items
+    //Displays items
         public void displayStock() {
+            //System.out.println("------------------------------------------------");
+            System.out.println("@======================================================@");
             for (String stock : stockMap.keySet()) {
-                System.out.println(stockMap.get(stock).toString() + " " +
-                        ((productInventory.get(stock) > 0) ?
-                                productInventory.get(stock) + " remaining " : "SOLD OUT"));
-            }
-        }
 
-        /*
-        Need to figure out how best to run this without object instantiation/initialization
-         */
+                System.out.println( stockMap.get(stock).toString() + " " +
+                        ((productInventory.get(stock) > 0) ?
+                                productInventory.get(stock) + " remaining||" : "  SOLD OUT ||"));
+            }
+            System.out.println("@======================================================@");
+        }
 
         //adds item to Machine
         public void stockItem(String position, Item item) {
